@@ -6,7 +6,7 @@ const msg2 = document.querySelector("#msg-2");
 weatherForm.addEventListener("submit", e => {
   e.preventDefault();
 
-  msg1.textContent = "Searching...";
+  msg1.textContent = "Zoeken...";
   msg2.textContent = "";
 
   fetch(`/weather?location=${searchInput.value}`).then(response => {
