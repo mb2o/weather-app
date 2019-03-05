@@ -26,7 +26,7 @@ app.use(express.static(publicDirPath));
 // Routes
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "Weather App",
+    title: "Weer App",
     name: "Mark Boomaars"
   });
 });
@@ -49,7 +49,7 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   if (!req.query.location) {
     return res.send({
-      error: "You must provide a location"
+      error: "Je moet een locatie opgeven!"
     });
   }
 
@@ -90,5 +90,5 @@ app.get("*", (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server started listening on port ${port}`);
+  console.log(`Server luistert op poort ${port}`);
 });

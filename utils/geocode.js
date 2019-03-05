@@ -5,9 +5,9 @@ const geocode = (address, cb) => {
 
   request({ url, json: true }, (err, { body }) => {
     if (err) {
-      cb("Unable to connect to Geocoding services!");
+      cb("Geen verbinding met de Geolocatie service!");
     } else if (body.features.length === 0) {
-      cb(`Unable to find location. Try another search.`);
+      cb(`Locatie niet gevonden. Probeer een andere locatie.`);
     } else {
       cb(undefined, {
         lon: body.features[0].center[0],

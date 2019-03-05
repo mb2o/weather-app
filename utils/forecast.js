@@ -5,7 +5,7 @@ const forecast = (lon, lat, cb) => {
 
   request({ url, json: true }, (err, { body }) => {
     if (err) {
-      cb("Unable to connect to Weather service!");
+      cb("Geen verbinding met de Darksky servers!");
     } else if (body.error) {
       cb(body.error);
     } else {
